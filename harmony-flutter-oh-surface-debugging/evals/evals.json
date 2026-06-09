@@ -1,0 +1,20 @@
+{
+  "skill_name": "harmony-flutter-oh-surface-debugging",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "HarmonyOS 2in1 上 Flutter-OH 应用启动后白屏，但日志里 runApp、Router.build.login、LoginPage.build 都出现了。帮我判断下一步该查什么。",
+      "expected_output": "The answer should not focus on Dart layout/auth/router first. It should separate Dart liveness, ArkUI liveness, XComponent surface creation, engine attachment timing, first-frame state, and drawable/window viewport metrics."
+    },
+    {
+      "id": 2,
+      "prompt": "Flutter-OH 应用最大化后画面正常铺满，但点击坐标错位，点 A 命中 B。日志显示 Dart physicalSize 还是旧尺寸，XComponent 已变大。",
+      "expected_output": "The answer should identify rendering/input pipeline mismatch, warn against RenderFit.RESIZE_FILL stretching, and suggest either true viewport update or ArkUI-level top-left anchored scaling with hit testing validation."
+    },
+    {
+      "id": 3,
+      "prompt": "我在 oh_modules/@ohos/flutter_ohos 里手动改了 FlutterView.ets 才修好 Harmony 白屏，接下来怎么保证团队和 CI 都能复现这个修复？",
+      "expected_output": "The answer should require a tracked patch, idempotent build-time application, and verification after clean dependency reinstall rather than relying on ignored dependency edits."
+    }
+  ]
+}

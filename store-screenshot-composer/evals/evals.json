@@ -1,0 +1,29 @@
+{
+  "skill_name": "store-screenshot-composer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use these 6 phone screenshots to generate App Store promo images. Create Chinese and English versions, keep the screenshot order, and export one PNG per screenshot.",
+      "expected_output": "Creates 12 platform-neutral phone-outline promotional PNGs under app-store-assets/generated with zh-Hans and en folders, plus a copy.md table with short titles, subtitles, and focus/callout assumptions.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have 5 iPhone screenshots and 4 iPad screenshots. Fill them into the same templates as the examples, generate Chinese, English, and German versions.",
+      "expected_output": "Creates phone and pad output folders for zh-Hans, en, and de; uses generic black outline templates without branded device shells, status bars, camera cutouts, or tilted overlapping phones.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Just give me the main title and subtitle for these 7 app screenshots in Chinese and English. Do not render images yet.",
+      "expected_output": "Returns a concise copy table only, with one title and subtitle per screenshot for zh-Hans and en, preserving screenshot order.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Create the normal phone promotional screenshots, and also create 2in1 promotional screenshots from the screenshots in the 2in1 directory.",
+      "expected_output": "Creates the requested phone outputs plus additional 2in1 PNG/JPG/JPEG promotional images under app-store-assets/generated/harmony-agc-2in1/{locale}/. The 2in1 images are 16:9, at least 1920x1080, and under 5 MB each.",
+      "files": []
+    }
+  ]
+}
